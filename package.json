@@ -1,12 +1,13 @@
 {
-  "name": "shop",
+  "name": "nanosilhouette-shop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "npx tsx prisma/seed.ts"
   },
   "dependencies": {
     "@mercadopago/sdk-react": "^1.0.7",
@@ -29,6 +30,7 @@
     "eslint-config-next": "16.1.6",
     "prisma": "^5.22.0",
     "tailwindcss": "^4",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }
